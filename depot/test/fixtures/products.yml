@@ -11,3 +11,10 @@ two:
   description: MyText
   image_url: MyString
   price: 9.99
+
+shoes:
+  title:     Jimmy Choo
+  description: 
+    Beautiful 3 inch heels.
+  image_url: someFile.jpg
+  price:     499.99
