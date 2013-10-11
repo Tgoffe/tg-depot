@@ -48,7 +48,6 @@ class ProductTest < ActiveSupport::TestCase
 
     assert product.invalid?
     assert product.errors[:title]
-
   end
 
   def new_product(image_url)
