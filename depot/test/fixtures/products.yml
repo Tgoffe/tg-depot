@@ -3,18 +3,17 @@
 one:
   title: MyString
   description: MyText
-  image_url: MyString
+  image_url: MyString.jpg
   price: 9.99
 
 two:
   title: MyString
   description: MyText
-  image_url: MyString
+  image_url: MyString.jpg
   price: 9.99
 
 shoes:
-  title:     Jimmy Choo
-  description: 
-    Beautiful 3 inch heels.
+  title: Jimmy Choo
+  description: Beautiful 3 inch heels.
   image_url: someFile.jpg
-  price:     499.99
+  price: 499.99

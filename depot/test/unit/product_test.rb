@@ -1,6 +1,7 @@
 require 'test_helper'
 
 class ProductTest < ActiveSupport::TestCase
+  fixtures :products
 
   test "product attributes must not be empty" do
     product = Product.new
@@ -27,6 +28,14 @@ class ProductTest < ActiveSupport::TestCase
     assert product.valid?
   end
 
+  test "length must be less than 20" do
+    product = new_product("seed")
+
+    product.title = "sjdkfljaoifuawoeirualdfjkldnalkjfaoieruaoief"
+    assert product.invalid?
+    assert product.errors[:title]
+  end
+
   test "image url" do
     good_url = ["pic.jpg", "pic.JPG", "pic.gif", "pic.GIF", "pic.png", "pic.PNG"]
     bad_url = ["pic.pic", "pic.gpj", "pic.pxl"]
@@ -41,7 +50,7 @@ class ProductTest < ActiveSupport::TestCase
   end
 
   test "product is not valid without a unique title" do
-    product = Product.new(title:  product(:shoes).title,
+    product = Product.new(title:  products(:shoes).title,
     	                  description: "bla",
     	                  price: "12.00",
     	                  image_url:  "pic.jpg")
