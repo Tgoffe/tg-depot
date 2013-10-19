@@ -17,3 +17,10 @@ shoes:
   description: Beautiful 3 inch heels.
   image_url: someFile.jpg
   price: 499.99
+
+ruby:
+  title: Ruby Red Slippers
+  description: Beautiful 3 inch heels with rubies.
+  image_url: someFile.jpg
+  price: 599.99
+
